@@ -12,6 +12,13 @@
       background: #0a0a0a;
       color: #00ffea;
     }
+
+    /* Неоновый эффект для текста */
+    @keyframes neonGlow {
+      0%, 100% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 40px #0ff; }
+      50% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #0ff, 0 0 50px #0ff; }
+    }
+
     header {
       text-align: center;
       padding: 50px 20px;
@@ -20,12 +27,16 @@
     header h1 {
       font-size: 3em;
       margin: 0;
+      color: #0ff;
+      animation: neonGlow 1.5s ease-in-out infinite alternate;
     }
     header p {
       font-size: 1.2em;
       margin-top: 10px;
       color: #0ff;
+      animation: neonGlow 2s ease-in-out infinite alternate;
     }
+
     .container {
       display: flex;
       justify-content: center;
@@ -40,18 +51,25 @@
       width: 300px;
       text-align: center;
       padding: 20px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffea;
     }
     .card img {
       width: 100%;
       height: auto;
       border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .card img:hover {
+      transform: scale(1.05);
     }
     .card h2 {
       margin: 15px 0 10px;
+      color: #0ff;
+      text-shadow: 0 0 5px #00ffea;
     }
     .card p {
       font-size: 0.95em;
@@ -65,16 +83,21 @@
       background: #00ffea;
       text-decoration: none;
       border-radius: 5px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 5px #00ffea;
+      animation: neonGlow 1.8s ease-in-out infinite alternate;
     }
     .card a:hover {
       background: #00ccaa;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #0ff;
     }
     footer {
       text-align: center;
       padding: 20px;
       border-top: 1px solid #00ffea;
       color: #0ff;
+      text-shadow: 0 0 5px #00ffea;
     }
   </style>
 </head>
@@ -89,13 +112,13 @@
     <div class="card">
       <img src="hazecursor.png" alt="HazeCursor">
       <h2>HazeCursor</h2>
-      <p>Бесплатная версия. Простой и красивый курсор с эффектами.</p>
+      <p>Простой дым за курсором.</p>
       <a href="https://drive.google.com/file/d/1Si33DGrdQNsjoQI8U8evKRPVAdD4md7C/view?usp=sharing" target="_blank">Скачать</a>
     </div>
     <div class="card">
       <img src="hazecursor pro.png" alt="HazeCursor Pro">
       <h2>HazeCursor Pro</h2>
-      <p>Профессиональная версия с расширенными эффектами и настройками.</p>
+      <p>Дым с разными цветами, регулируемый размер и потоки. Будущие обновления включены.</p>
       <a href="https://t.me/+R-nVJ80j1ftjMmQy" target="_blank">Купить в Telegram</a>
     </div>
   </div>
