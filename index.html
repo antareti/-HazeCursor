@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HazeCursor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: #0a0a0a;
+      color: #00ffea;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(90deg, #000000, #001f2f);
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #0ff;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 50px 20px;
+    }
+    .card {
+      background: #111;
+      border: 2px solid #00ffea;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .card h2 {
+      margin: 15px 0 10px;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #aaffff;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      color: #000;
+      background: #00ffea;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .card a:hover {
+      background: #00ccaa;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #00ffea;
+      color: #0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HazeCursor</h1>
+    <p>Сделай свой курсор живым и уникальным</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <img src="haze_main.png" alt="HazeCursor">
+      <h2>HazeCursor</h2>
+      <p>Бесплатная версия. Простой и красивый курсор с эффектами.</p>
+      <a href="https://drive.google.com/file/d/1Si33DGrdQNsjoQI8U8evKRPVAdD4md7C/view?usp=sharing" target="_blank">Скачать</a>
+    </div>
+    <div class="card">
+      <img src="haze_pro.png" alt="HazeCursor Pro">
+      <h2>HazeCursor Pro</h2>
+      <p>Профессиональная версия с расширенными эффектами и настройками.</p>
+      <a href="https://t.me/+R-nVJ80j1ftjMmQy" target="_blank">Купить в Telegram</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 HazeCursor. Все права защищены.
+  </footer>
+
+</body>
+</html>
