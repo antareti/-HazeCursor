@@ -22,11 +22,6 @@
       0%, 100% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 40px #0ff; }
       50% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #0ff, 0 0 50px #0ff; }
     }
-    
-    @keyframes imageGlow {
-      0%, 100% { filter: drop-shadow(0 0 5px #00ffea) drop-shadow(0 0 10px #00ffea); }
-      50% { filter: drop-shadow(0 0 10px #00ffea) drop-shadow(0 0 20px #00ffea); }
-    }
 
     nav {
       text-align: center;
@@ -67,16 +62,6 @@
       margin-top: 10px;
       color: #0ff;
       animation: neonGlow 2s ease-in-out infinite alternate;
-    }
-    
-    .promo-image {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      margin-top: 30px;
-      border: 2px solid #00ffea;
-      border-radius: 10px;
-      animation: imageGlow 1.5s ease-in-out infinite alternate;
     }
 
     .container {
@@ -279,7 +264,6 @@
   <header>
     <h1>HazeCursor</h1>
     <p>Сделай свой курсор живым и уникальным</p>
-    <img src="555.png" alt="555.png" class="promo-image">
   </header>
 
   <nav>
