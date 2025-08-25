@@ -11,8 +11,8 @@ body {
   margin: 0;
   font-family: 'Share Tech Mono', monospace;
   background: linear-gradient(120deg, #0a0a0a, #001f2f, #0a0a0a);
-  overflow-x: hidden;
   color: #00ffea;
+  overflow-x: hidden;
 }
 
 @keyframes neonGlow {
@@ -23,231 +23,64 @@ body {
 nav {
   text-align: center;
   padding: 15px 20px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid #00ffea;
   margin-bottom: 20px;
 }
-nav a {
-  color: #00ffea;
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 1.1em;
-  transition: color 0.3s, text-shadow 0.3s;
-  animation: neonGlow 2s ease-in-out infinite alternate;
-}
-nav a:hover {
-  color: #0ff;
-  text-shadow: 0 0 10px #0ff;
-}
+nav a { color:#00ffea; text-decoration:none; margin:0 20px; font-size:1.1em; transition:0.3s; animation: neonGlow 2s ease-in-out infinite alternate;}
+nav a:hover { color:#0ff; text-shadow:0 0 10px #0ff;}
 
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(90deg, #000000, #001f2f);
-}
-header h1 {
-  font-size: 3em;
-  margin: 0;
-  color: #0ff;
-  animation: neonGlow 1.5s ease-in-out infinite alternate;
-}
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
-  color: #0ff;
-  animation: neonGlow 2s ease-in-out infinite alternate;
-}
+header {text-align:center; padding:50px 20px; background: linear-gradient(90deg, #000000, #001f2f);}
+header h1 {font-size:3em; margin:0; color:#0ff; animation:neonGlow 1.5s infinite alternate;}
+header p {font-size:1.2em; margin-top:10px; color:#0ff; animation:neonGlow 2s infinite alternate;}
 
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 50px 20px;
-}
-.card {
-  background: rgba(0,0,0,0.6);
-  border: 2px solid #00ffea;
-  border-radius: 15px;
-  width: 300px;
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #00ffea;
-}
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-.card img:hover {
-  transform: scale(1.05);
-}
-.card h2 {
-  margin: 15px 0 10px;
-  color: #0ff;
-  text-shadow: 0 0 5px #00ffea;
-}
-.card p {
-  font-size: 0.95em;
-  color: #aaffff;
-}
-.card a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  color: #000;
-  background: #00ffea;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 5px #00ffea;
-  animation: neonGlow 1.8s ease-in-out infinite alternate;
-}
-.card a:hover {
-  background: #00ccaa;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #0ff;
-}
+.container {display:flex; justify-content:center; flex-wrap:wrap; gap:30px; padding:50px 20px;}
+.card {background: rgba(0,0,0,0.6); border:2px solid #00ffea; border-radius:15px; width:300px; text-align:center; padding:20px; transition:0.3s;}
+.card:hover { transform:scale(1.05); box-shadow:0 0 20px #00ffea;}
+.card img { width:100%; height:auto; border-radius:10px; transition:0.3s;}
+.card img:hover { transform:scale(1.05);}
+.card h2 {margin:15px 0 10px; color:#0ff; text-shadow:0 0 5px #00ffea;}
+.card p { font-size:0.95em; color:#aaffff;}
+.card a { display:inline-block; margin-top:15px; padding:10px 20px; color:#000; background:#00ffea; text-decoration:none; border-radius:5px; box-shadow:0 0 5px #00ffea; animation:neonGlow 1.8s infinite alternate; transition:0.3s;}
+.card a:hover { background:#00ccaa; transform:scale(1.05); box-shadow:0 0 15px #0ff;}
 
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #00ffea;
-  color: #0ff;
-  text-shadow: 0 0 5px #00ffea;
-}
+footer {text-align:center; padding:20px; border-top:1px solid #00ffea; color:#0ff; text-shadow:0 0 5px #00ffea;}
+#faq .faq-item {cursor:pointer; border-bottom:1px solid #00ffea; padding:20px; margin-bottom:10px; transition:0.3s;}
+#faq .faq-item:hover {background: rgba(0,255,234,0.1);}
+#faq .faq-question {margin:0; color:#0ff; text-shadow:0 0 5px #00ffea;}
+#faq .faq-answer {max-height:0; overflow:hidden; transition:0.5s; color:#aaffff; padding-top:10px; opacity:0;}
+#faq .faq-item.active .faq-answer { max-height:200px; opacity:1; }
 
-#faq .faq-item {
-    cursor: pointer;
-    border-bottom: 1px solid #00ffea;
-    padding: 20px;
-    margin-bottom: 10px;
-    transition: background 0.3s;
-}
-#faq .faq-item:hover {
-    background: rgba(0, 255, 234, 0.1);
-}
-#faq .faq-question {
-    margin: 0;
-    color: #0ff;
-    text-shadow: 0 0 5px #00ffea;
-}
-#faq .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.5s;
-    color: #aaffff;
-    padding-top: 10px;
-    opacity: 0;
-}
-#faq .faq-item.active .faq-answer {
-    max-height: 200px;
-    opacity: 1;
-}
+#reviews .review-card { width:300px; background: rgba(21,21,21,0.7); border:2px solid #0ff; border-radius:15px; padding:25px; transition:0.3s;}
+#reviews .review-card:hover { transform:translateY(-10px); box-shadow:0 0 25px #0ff;}
+#reviews .review-card p {font-style:italic; color:#aaffff;}
+#reviews .review-card .author { margin-top:15px; font-size:0.9em; font-weight:bold; color:#00ffea; }
 
-#reviews .review-card {
-    width: 300px;
-    background: rgba(21,21,21,0.7);
-    border: 2px solid #0ff;
-    border-radius: 15px;
-    padding: 25px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-#reviews .review-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px #0ff;
-}
-#reviews .review-card p {
-    font-style: italic;
-    color: #aaffff;
-}
-#reviews .review-card .author {
-    margin-top: 15px;
-    font-size: 0.9em;
-    font-weight: bold;
-    color: #00ffea;
-}
+.social-icons a { color:#00ffea; font-size:1.5em; margin:0 10px; transition:0.3s; text-shadow:0 0 5px #00ffea;}
+.social-icons a:hover { color:#0ff; transform:scale(1.2); }
 
-.social-icons a {
-  color: #00ffea;
-  font-size: 1.5em;
-  margin: 0 10px;
-  transition: color 0.3s, transform 0.3s;
-  text-shadow: 0 0 5px #00ffea;
-}
-.social-icons a:hover {
-  color: #0ff;
-  transform: scale(1.2);
-}
+#contact {flex-direction:column; align-items:center; text-align:center;}
+#contact form {display:flex; flex-direction:column; gap:15px; width:100%; max-width:500px;}
+#contact form input, #contact form textarea { padding:15px; border:2px solid #00ffea; background: rgba(0,0,0,0.5); color:#00ffea; font-family:'Share Tech Mono', monospace; border-radius:5px; transition:0.3s;}
+#contact form input:focus, #contact form textarea:focus { outline:none; box-shadow:0 0 15px #0ff;}
+#contact form textarea { resize:vertical; min-height:150px;}
+#contact form button { padding:15px; border:none; background:#00ffea; color:#000; font-family:'Share Tech Mono', monospace; font-size:1.1em; cursor:pointer; border-radius:5px; animation:neonGlow 1.8s infinite alternate; transition:0.3s;}
+#contact form button:hover { background:#00ccaa; transform:scale(1.02); box-shadow:0 0 15px #0ff; }
 
-#contact {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  max-width: 500px;
-}
-#contact form input,
-#contact form textarea {
-  padding: 15px;
-  border: 2px solid #00ffea;
-  background: rgba(0, 0, 0, 0.5);
-  color: #00ffea;
-  font-family: 'Share Tech Mono', monospace;
-  border-radius: 5px;
-  transition: box-shadow 0.3s;
-}
-#contact form input:focus,
-#contact form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 15px #0ff;
-}
-#contact form textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-#contact form button {
-  padding: 15px;
-  border: none;
-  background: #00ffea;
-  color: #000;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-  animation: neonGlow 1.8s ease-in-out infinite alternate;
-}
-#contact form button:hover {
-  background: #00ccaa;
-  transform: scale(1.02);
-  box-shadow: 0 0 15px #0ff;
-}
-
-/* Частицы за курсором */
+/* Дымовые частицы */
 .particle {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: fadeOut 1s forwards;
+  position:absolute;
+  width:20px; height:20px;
+  border-radius:50%;
+  pointer-events:none;
+  background: rgba(0,255,234,0.5);
+  animation: moveFade 1s forwards;
 }
-@keyframes fadeOut {
-  to { opacity: 0; transform: translate(0,-20px); }
+@keyframes moveFade {
+  to { transform: translate(-15px,-30px) scale(0); opacity:0;}
 }
 </style>
 </head>
@@ -267,32 +100,34 @@ footer {
 
 <div class="container" id="products">
   <div class="card">
+    <img src="hazecursor.png" alt="HazeCursor">
     <h2>HazeCursor</h2>
     <p>Простой дым за курсором.</p>
   </div>
   <div class="card">
+    <img src="hazecursor pro.png" alt="HazeCursor Pro">
     <h2>HazeCursor Pro</h2>
-    <p>Дым с разными цветами, регулируемый размер и потоки. Будущие обновления включены.</p>
+    <p>Дым с разными цветами, регулируемый размер и потоки.</p>
   </div>
 </div>
 
 <div class="container" id="reviews">
   <h2>Отзывы пользователей</h2>
   <div class="review-card">
-    <p>"Отличная программа! Курсор стал невероятно крутым, а производительность вообще не упала. Рекомендую!"</p>
+    <p>"Отличная программа! Курсор стал невероятно крутым, а производительность не упала."</p>
     <p class="author">— Иван, @ivan_dev</p>
   </div>
   <div class="review-card">
-    <p>"HazeCursor Pro — это просто бомба! Столько настроек, можно сделать всё, что душе угодно. Я в восторге."</p>
+    <p>"HazeCursor Pro — просто бомба! Настроек много, я в восторге."</p>
     <p class="author">— Мария, @masha_design</p>
   </div>
 </div>
 
 <div class="container" id="faq">
-  <h2>Часто задаваемые вопросы</h2>
+  <h2>FAQ</h2>
   <div class="faq-item">
     <h3 class="faq-question">Что такое HazeCursor?</h3>
-    <p class="faq-answer">HazeCursor — это небольшая утилита, которая добавляет эффект дыма или следа за вашим курсором мыши.</p>
+    <p class="faq-answer">Утилита добавляет эффект дыма или следа за курсором.</p>
   </div>
 </div>
 
@@ -300,8 +135,8 @@ footer {
   <h2>Связаться с нами</h2>
   <form id="contact-form">
     <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-    <input type="email" id="email" name="email" placeholder="Ваша электронная почта" required>
-    <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
+    <input type="email" id="email" name="email" placeholder="Ваша почта" required>
+    <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
     <button type="submit">Отправить</button>
     <p id="form-status" style="color:#0ff; margin-top:10px;"></p>
   </form>
@@ -309,48 +144,40 @@ footer {
 
 <footer>
   <div class="social-icons">
-    <a href="https://t.me/+R-nVJ80j1ftjMmQy" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-    <a href="#" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
   </div>
   &copy; 2025 HazeCursor. Все права защищены.
 </footer>
 
 <script>
-// FAQ аккордеон
+// FAQ
 document.addEventListener('DOMContentLoaded', () => {
-  const questions = document.querySelectorAll('.faq-question');
-  questions.forEach(q => q.addEventListener('click', () => {
-    q.parentElement.classList.toggle('active');
-  }));
+  document.querySelectorAll('.faq-question').forEach(q => q.addEventListener('click', ()=>q.parentElement.classList.toggle('active')));
 });
 
-// Форма обратной связи
+// Форма
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 form.addEventListener('submit', e => {
   e.preventDefault();
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  if(name && email && message){
-    status.textContent = "Спасибо! Ваше сообщение отправлено.";
-    form.reset();
-  } else {
-    status.textContent = "Пожалуйста, заполните все поля.";
-  }
+  const msg = document.getElementById('message').value.trim();
+  if(name && email && msg){ status.textContent = "Спасибо! Сообщение отправлено."; form.reset(); }
+  else{ status.textContent="Заполните все поля."; }
 });
 
-// Частицы за курсором
+// Дым за курсором
 document.addEventListener('mousemove', e => {
-  const particle = document.createElement('div');
-  particle.classList.add('particle');
-  particle.style.left = e.pageX + 'px';
-  particle.style.top = e.pageY + 'px';
-  particle.style.background = `hsl(${Math.random()*360}, 100%, 50%)`;
-  document.body.appendChild(particle);
-  setTimeout(() => particle.remove(), 1000);
+  const p = document.createElement('div');
+  p.className='particle';
+  p.style.left=e.pageX+'px';
+  p.style.top=e.pageY+'px';
+  p.style.background=`hsla(${Math.random()*360}, 100%, 50%,0.5)`;
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(), 1000);
 });
 </script>
-
 </body>
 </html>
