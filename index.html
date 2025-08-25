@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Ваш существующий CSS */
     body {
       margin: 0;
       font-family: 'Share Tech Mono', monospace;
@@ -15,13 +14,11 @@
       color: #00ffea;
     }
 
-    /* Неоновый эффект для текста */
     @keyframes neonGlow {
       0%, 100% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 40px #0ff; }
       50% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #0ff, 0 0 50px #0ff; }
     }
 
-    /* Новый CSS для навигации */
     nav {
       text-align: center;
       padding: 15px 20px;
@@ -126,7 +123,6 @@
       text-shadow: 0 0 5px #00ffea;
     }
 
-    /* Новый CSS для FAQ (аккордеона) */
     #faq .faq-item {
         cursor: pointer;
         border-bottom: 1px solid #00ffea;
@@ -151,11 +147,10 @@
         opacity: 0;
     }
     #faq .faq-item.active .faq-answer {
-        max-height: 200px; /* Достаточное значение для текста */
+        max-height: 200px;
         opacity: 1;
     }
     
-    /* Новый CSS для отзывов */
     #reviews .review-card {
         width: 300px;
         background: #151515;
@@ -179,7 +174,6 @@
         color: #00ffea;
     }
 
-    /* Новый CSS для социальных сетей в футере */
     .social-icons a {
       color: #00ffea;
       font-size: 1.5em;
@@ -192,7 +186,6 @@
       transform: scale(1.2);
     }
 
-    /* Новый CSS для формы обратной связи */
     #contact {
       flex-direction: column;
       align-items: center;
@@ -303,11 +296,12 @@
   <div class="container" id="contact">
     <h2>Связаться с нами</h2>
     <p>У вас есть вопросы, предложения или проблемы? Заполните форму, и мы свяжемся с вами как можно скорее.</p>
-    <form action="submit_form.php" method="POST">
+    <form id="contact-form">
       <input type="text" id="name" name="name" placeholder="Ваше имя" required>
       <input type="email" id="email" name="email" placeholder="Ваша электронная почта" required>
       <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
       <button type="submit">Отправить</button>
+      <p id="form-status" style="color:#0ff; margin-top:10px;"></p>
     </form>
   </div>
 
@@ -320,6 +314,7 @@
   </footer>
 
   <script>
+    // FAQ аккордеон
     document.addEventListener('DOMContentLoaded', () => {
       const questions = document.querySelectorAll('.faq-question');
       questions.forEach(question => {
@@ -328,6 +323,24 @@
           parent.classList.toggle('active');
         });
       });
+    });
+
+    // Рабочая форма обратной связи
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if(name && email && message){
+        status.textContent = "Спасибо! Ваше сообщение отправлено.";
+        form.reset();
+      } else {
+        status.textContent = "Пожалуйста, заполните все поля.";
+      }
     });
   </script>
 
