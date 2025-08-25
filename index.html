@@ -10,14 +10,22 @@
     body {
       margin: 0;
       font-family: 'Share Tech Mono', monospace;
-      background: #0a0a0a;
+      background: linear-gradient(120deg, #00fff6, #ff00ff, #00ff00, #ff0) no-repeat;
+      background-size: 400% 400%;
+      animation: neonBackground 15s ease infinite;
       color: #00fff6;
       text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6, 0 0 20px #00fff6, 0 0 40px #0ff;
     }
 
+    @keyframes neonBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     @keyframes neonGlow {
-      0%, 100% { text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6, 0 0 20px #00fff6, 0 0 40px #0ff; }
-      50% { text-shadow: 0 0 10px #00fff6, 0 0 20px #00fff6, 0 0 30px #0ff, 0 0 50px #0ff; }
+      0%, 100% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 40px #0ff; }
+      50% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #0ff, 0 0 50px #0ff; }
     }
 
     nav {
@@ -27,17 +35,16 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid #00fff6;
+      border-bottom: 1px solid #00ffea;
       margin-bottom: 20px;
     }
     nav a {
-      color: #00fff6;
+      color: #00ffea;
       text-decoration: none;
       margin: 0 20px;
       font-size: 1.1em;
       transition: color 0.3s, text-shadow 0.3s;
       animation: neonGlow 2s ease-in-out infinite alternate;
-      text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6, 0 0 20px #00fff6;
     }
     nav a:hover {
       color: #0ff;
@@ -47,21 +54,20 @@
     header {
       text-align: center;
       padding: 50px 20px;
-      background: linear-gradient(90deg, #000000, #001f2f);
+      background: rgba(0,0,0,0.2);
+      box-shadow: 0 0 50px #00fff6, 0 0 100px #ff00ff, 0 0 150px #00ff00;
     }
     header h1 {
       font-size: 3em;
       margin: 0;
-      color: #00fff6;
+      color: #0ff;
       animation: neonGlow 1.5s ease-in-out infinite alternate;
-      text-shadow: 0 0 10px #00fff6, 0 0 20px #00fff6, 0 0 30px #0ff, 0 0 50px #0ff;
     }
     header p {
       font-size: 1.2em;
       margin-top: 10px;
-      color: #00fff6;
+      color: #0ff;
       animation: neonGlow 2s ease-in-out infinite alternate;
-      text-shadow: 0 0 10px #00fff6, 0 0 20px #00fff6, 0 0 30px #0ff, 0 0 50px #0ff;
     }
 
     .container {
@@ -73,7 +79,7 @@
     }
     .card {
       background: #111;
-      border: 2px solid #00fff6;
+      border: 2px solid #00ffea;
       border-radius: 15px;
       width: 300px;
       text-align: center;
@@ -82,7 +88,7 @@
     }
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px #00fff6;
+      box-shadow: 0 0 20px #00ffea;
     }
     .card img {
       width: 100%;
@@ -95,24 +101,23 @@
     }
     .card h2 {
       margin: 15px 0 10px;
-      color: #00fff6;
-      text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6, 0 0 20px #0ff;
+      color: #0ff;
+      text-shadow: 0 0 5px #00ffea;
     }
     .card p {
       font-size: 0.95em;
-      color: #00fff6;
-      text-shadow: 0 0 5px #00fff6;
+      color: #aaffff;
     }
     .card a {
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
       color: #000;
-      background: #00fff6;
+      background: #00ffea;
       text-decoration: none;
       border-radius: 5px;
       transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 0 5px #00fff6;
+      box-shadow: 0 0 5px #00ffea;
       animation: neonGlow 1.8s ease-in-out infinite alternate;
     }
     .card a:hover {
@@ -120,74 +125,72 @@
       transform: scale(1.05);
       box-shadow: 0 0 15px #0ff;
     }
+
     footer {
       text-align: center;
       padding: 20px;
-      border-top: 1px solid #00fff6;
-      color: #00fff6;
-      text-shadow: 0 0 10px #00fff6, 0 0 20px #00fff6;
+      border-top: 1px solid #00ffea;
+      color: #0ff;
+      text-shadow: 0 0 5px #00ffea;
     }
 
     #faq .faq-item {
-      cursor: pointer;
-      border-bottom: 1px solid #00fff6;
-      padding: 20px;
-      margin-bottom: 10px;
-      transition: background 0.3s;
+        cursor: pointer;
+        border-bottom: 1px solid #00ffea;
+        padding: 20px;
+        margin-bottom: 10px;
+        transition: background 0.3s;
     }
     #faq .faq-item:hover {
-      background: rgba(0, 255, 246, 0.1);
+        background: rgba(0, 255, 234, 0.1);
     }
     #faq .faq-question {
-      margin: 0;
-      color: #00fff6;
-      text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6;
+        margin: 0;
+        color: #0ff;
+        text-shadow: 0 0 5px #00ffea;
     }
     #faq .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease-out, opacity 0.5s;
-      color: #00fff6;
-      padding-top: 10px;
-      opacity: 0;
-      text-shadow: 0 0 5px #00fff6;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.5s;
+        color: #aaffff;
+        padding-top: 10px;
+        opacity: 0;
     }
     #faq .faq-item.active .faq-answer {
-      max-height: 200px;
-      opacity: 1;
+        max-height: 200px;
+        opacity: 1;
     }
 
     #reviews .review-card {
-      width: 300px;
-      background: #151515;
-      border: 2px solid #00fff6;
-      border-radius: 15px;
-      padding: 25px;
-      transition: transform 0.3s, box-shadow 0.3s;
+        width: 300px;
+        background: #151515;
+        border: 2px solid #0ff;
+        border-radius: 15px;
+        padding: 25px;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
     #reviews .review-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px #00fff6;
+        transform: translateY(-10px);
+        box-shadow: 0 0 25px #0ff;
     }
     #reviews .review-card p {
-      font-style: italic;
-      color: #00fff6;
-      text-shadow: 0 0 5px #00fff6;
+        font-style: italic;
+        color: #aaffff;
     }
     #reviews .review-card .author {
-      margin-top: 15px;
-      font-size: 0.9em;
-      font-weight: bold;
-      color: #00fff6;
-      text-shadow: 0 0 5px #00fff6;
+        margin-top: 15px;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #00ffea;
     }
 
     .social-icons a {
-      color: #00fff6;
+      color: #00ffea;
       font-size: 1.5em;
       margin: 0 10px;
       transition: color 0.3s, transform 0.3s;
-      text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6;
+      text-shadow: 0 0 5px #00ffea;
     }
     .social-icons a:hover {
       color: #0ff;
@@ -209,18 +212,17 @@
     #contact form input,
     #contact form textarea {
       padding: 15px;
-      border: 2px solid #00fff6;
+      border: 2px solid #00ffea;
       background: rgba(0, 0, 0, 0.5);
-      color: #00fff6;
+      color: #00ffea;
       font-family: 'Share Tech Mono', monospace;
       border-radius: 5px;
       transition: box-shadow 0.3s;
-      text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6;
     }
     #contact form input:focus,
     #contact form textarea:focus {
       outline: none;
-      box-shadow: 0 0 15px #00fff6, 0 0 30px #00fff6;
+      box-shadow: 0 0 15px #0ff;
     }
     #contact form textarea {
       resize: vertical;
@@ -229,7 +231,7 @@
     #contact form button {
       padding: 15px;
       border: none;
-      background: #00fff6;
+      background: #00ffea;
       color: #000;
       font-family: 'Share Tech Mono', monospace;
       font-size: 1.1em;
@@ -237,17 +239,11 @@
       border-radius: 5px;
       transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
       animation: neonGlow 1.8s ease-in-out infinite alternate;
-      text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6;
     }
     #contact form button:hover {
       background: #00ccaa;
       transform: scale(1.02);
       box-shadow: 0 0 15px #0ff;
-    }
-    #form-status {
-      color: #00fff6;
-      text-shadow: 0 0 5px #00fff6, 0 0 10px #00fff6;
-      margin-top: 10px;
     }
   </style>
 </head>
@@ -316,7 +312,7 @@
       <input type="email" id="email" name="email" placeholder="Ваша электронная почта" required>
       <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
       <button type="submit">Отправить</button>
-      <p id="form-status"></p>
+      <p id="form-status" style="color:#0ff; margin-top:10px;"></p>
     </form>
   </div>
 
