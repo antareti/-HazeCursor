@@ -44,4 +44,145 @@
     #faq .faq-item:hover { background: rgba(0, 255, 234, 0.1); }
     #faq .faq-question { margin: 0; color: #0ff; text-shadow: 0 0 5px #00ffea; }
     #faq .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, opacity 0.5s; color: #aaffff; padding-top: 10px; opacity: 0; }
-    #faq .faq-item.active .faq-answer { max-height: 200px; opacity
+    #faq .faq-item.active .faq-answer { max-height: 200px; opacity: 1; }
+
+    #reviews .review-card { width: 300px; background: #151515; border: 2px solid #0ff; border-radius: 15px; padding: 25px; transition: transform 0.3s, box-shadow 0.3s; }
+    #reviews .review-card:hover { transform: translateY(-10px); box-shadow: 0 0 25px #0ff; }
+    #reviews .review-card p { font-style: italic; color: #aaffff; }
+    #reviews .review-card .author { margin-top: 15px; font-size: 0.9em; font-weight: bold; color: #00ffea; }
+
+    .social-icons a { color: #00ffea; font-size: 1.5em; margin: 0 10px; transition: color 0.3s, transform 0.3s; text-shadow: 0 0 5px #00ffea; }
+    .social-icons a:hover { color: #0ff; transform: scale(1.2); }
+
+    #contact { flex-direction: column; align-items: center; text-align: center; }
+    #contact form { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 500px; }
+    #contact form input, #contact form textarea { padding: 15px; border: 2px solid #00ffea; background: rgba(0,0,0,0.5); color: #00ffea; font-family: 'Share Tech Mono', monospace; border-radius: 5px; transition: box-shadow 0.3s; }
+    #contact form input:focus, #contact form textarea:focus { outline: none; box-shadow: 0 0 15px #0ff; }
+    #contact form textarea { resize: vertical; min-height: 150px; }
+    #contact form button { padding: 15px; border: none; background: #00ffea; color: #000; font-family: 'Share Tech Mono', monospace; font-size: 1.1em; cursor: pointer; border-radius: 5px; transition: background 0.3s, transform 0.3s, box-shadow 0.3s; animation: neonGlow 1.8s ease-in-out infinite alternate; }
+    #contact form button:hover { background: #00ccaa; transform: scale(1.02); box-shadow: 0 0 15px #0ff; }
+
+    /* Эффект частиц за курсором */
+    .particle { position: absolute; width: 8px; height: 8px; border-radius: 50%; pointer-events: none; animation: fadeOut 1s forwards; }
+    @keyframes fadeOut { 0% { opacity:1; transform:scale(1); } 100% { opacity:0; transform:scale(2); } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HazeCursor</h1>
+    <p>Сделай свой курсор живым и уникальным</p>
+  </header>
+
+  <nav>
+    <a href="#products">Продукты</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Связаться</a>
+  </nav>
+
+  <div class="container" id="products">
+    <div class="card">
+      <img src="hazecursor.png" alt="HazeCursor">
+      <h2>HazeCursor</h2>
+      <p>Простой дым за курсором.</p>
+      <a href="https://drive.google.com/file/d/1Si33DGrdQNsjoQI8U8evKRPVAdD4md7C/view?usp=sharing" target="_blank">Скачать</a>
+    </div>
+    <div class="card">
+      <img src="hazecursor pro.png" alt="HazeCursor Pro">
+      <h2>HazeCursor Pro</h2>
+      <p>Дым с разными цветами, регулируемый размер и потоки. Будущие обновления включены.</p>
+      <a href="https://t.me/+R-nVJ80j1ftjMmQy" target="_blank">Купить в Telegram</a>
+    </div>
+  </div>
+
+  <div class="container" id="reviews">
+    <h2>Отзывы пользователей</h2>
+    <div class="review-card">
+      <p>"Отличная программа! Курсор стал невероятно крутым, а производительность вообще не упала. Рекомендую!"</p>
+      <p class="author">— Иван, @ivan_dev</p>
+    </div>
+    <div class="review-card">
+      <p>"HazeCursor Pro — это просто бомба! Столько настроек, можно сделать всё, что душе угодно. Я в восторге."</p>
+      <p class="author">— Мария, @masha_design</p>
+    </div>
+  </div>
+
+  <div class="container" id="faq">
+    <h2>Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3 class="faq-question">Что такое HazeCursor?</h3>
+      <p class="faq-answer">HazeCursor — это небольшая утилита, которая добавляет эффект дыма или следа за вашим курсором мыши, делая его более интерактивным и уникальным.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Какие операционные системы поддерживаются?</h3>
+      <p class="faq-answer">HazeCursor разработан для Windows. Совместимость с macOS и Linux в настоящее время находится в разработке.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Как установить HazeCursor?</h3>
+      <p class="faq-answer">После скачивания архива просто распакуйте его и запустите исполняемый файл. Программа работает в фоновом режиме.</p>
+    </div>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Связаться с нами</h2>
+    <p>У вас есть вопросы, предложения или проблемы? Заполните форму, и мы свяжемся с вами как можно скорее.</p>
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+      <input type="email" id="email" name="email" placeholder="Ваша электронная почта" required>
+      <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+      <p id="form-status" style="color:#0ff; margin-top:10px;"></p>
+    </form>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://t.me/+R-nVJ80j1ftjMmQy" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="#" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+    </div>
+    &copy; 2025 HazeCursor. Все права защищены.
+  </footer>
+
+  <script>
+    // FAQ аккордеон
+    document.addEventListener('DOMContentLoaded', () => {
+      const questions = document.querySelectorAll('.faq-question');
+      questions.forEach(question => {
+        question.addEventListener('click', () => {
+          const parent = question.parentElement;
+          parent.classList.toggle('active');
+        });
+      });
+    });
+
+    // Эффект частиц за курсором
+    document.addEventListener('mousemove', e => {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = e.pageX - 4 + 'px';
+      particle.style.top = e.pageY - 4 + 'px';
+      particle.style.background = `hsl(${Math.random()*360},100%,50%)`;
+      document.body.appendChild(particle);
+      setTimeout(() => particle.remove(), 1000);
+    });
+
+    // Форма обратной связи
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(name && email && message){
+        status.textContent = "Спасибо! Ваше сообщение отправлено.";
+        form.reset();
+      } else {
+        status.textContent = "Пожалуйста, заполните все поля.";
+      }
+    });
+  </script>
+
+</body>
+</html>
